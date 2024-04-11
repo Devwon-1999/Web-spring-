@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}">
+            <!-- th:each는 MemberController에서 List형식으로 넘어온-->
+            <!-- members에 대해서 타임리프 템플릿 엔진이 리스트를 표 형식으로 계속해서 실행시켜준다.-->
+            <!-- th:each는 타임리프 템플릿 문법중 하나인데 for문과 유사하다.(자바의 for each문법) -->
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

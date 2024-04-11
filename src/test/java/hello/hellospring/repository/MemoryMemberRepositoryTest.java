@@ -12,10 +12,10 @@ import java.util.Optional;
 
 class MemoryMemberRepositoryTest {
     MemoryMemberRepository repository = new MemoryMemberRepository();
-    @AfterEach
+    @AfterEach //테스트 이후 항상 메모리 버퍼를 비워줘라
     public void afterEach(){
         repository.clearStore();
-    }
+    } //AfterEach는 Test코드 한블럭당 끝날때마다 실행하라는 뜻
 
     @Test
     public void save(){

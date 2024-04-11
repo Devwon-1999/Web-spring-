@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div class="container">
+    <form action="/members/new" method="post">
+        <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+            <!-- 인풋타입 text name는 서버로 넘어올때의 키 placeholder은 아무것도 없을 시 적히는 문구 -->
+        </div>
+        <button type="submit">등록</button>
+        <!-- 버튼 클릭시 /members/new에 post방식으로 넘어오게 된다. MemberController의 PostMapping으로 -->
+    </form>
+
+</div>
+
+</body>
+</html>
